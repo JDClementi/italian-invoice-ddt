@@ -1,0 +1,23 @@
+{
+    "name": "jdclementi/italian-invoice-ddt",
+    "version": "1.0.0",
+    "description": "Library to generate italian invoice and ddt",
+    "type": "library",
+    "license": "no usage restriction",
+    "authors": [
+        {
+            "name": "Jacopo Di Clementi",
+            "email": "jacopodiclementi@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0",
+        "setasign/fpdf": "1.8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "ItalianInvoiceDdt\\": "src/"
+        }
+    }
+}
