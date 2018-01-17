@@ -16,8 +16,8 @@ class ItalianInvoiceDdt {
 	public function __construct($pippo){
 
 
-		echo "$pippo";
-		
+		echo "$pippo baudo";
+
 	}
 
 	public static function pippobaudo() {
