@@ -13,6 +13,13 @@ namespace ItalianInvoiceDdt;
 class ItalianInvoiceDdt {
 
 
+	public function __construct($pippo){
+
+
+		echo "$pippo";
+		
+	}
+
 	public static function pippobaudo() {
 
 
