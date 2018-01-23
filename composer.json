@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Library to generate italian invoice and ddt",
     "type": "library",
-    "license": "no usage restriction",
+    "license": "AFL-3.0",
     "authors": [
         {
             "name": "Jacopo Di Clementi",
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ItalianInvoiceDdt\\*": "src/"
+            "ItalianInvoiceDdt\\": "src/"
         }
     }
 }
