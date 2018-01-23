@@ -9,24 +9,44 @@
 
 namespace ItalianInvoiceDdt;
 
+use ItalianInvoiceDdt\Contenuto\ParteDescrittiva;
+use ItalianInvoiceDdt\Contenuto\ParteTabellare;
+use ItalianInvoiceDdt\Documenti\Ddt;
+use ItalianInvoiceDdt\Documenti\Fattura;
 
 class ItalianInvoiceDdt {
 
 
-	public function __construct($pippo){
+	public $ParteDescrittiva, $ParteTabellare, $Fattura;
 
+	public function __construct() {
 
-		echo "$pippo baudo";
+		$this->ParteDescrittiva = new ParteDescrittiva();
+
+		$this->ParteTabellare = new ParteTabellare();
+
 
 	}
 
-	public static function pippobaudo() {
+
+	public function StampaFattura() {
 
 
-		return "che professionista";
+		$Fattura = new Fattura( $this->ParteDescrittiva, $this->ParteTabellare );
 
+		$Fattura->Stampa();
+
+
+	}
+
+	public function StampaDdt() {
+
+		$Ddt = new Ddt( $this->ParteDescrittiva, $this->ParteTabellare );
+
+		$Ddt->Stampa();
 
 	}
 
 
 }
+
