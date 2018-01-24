@@ -47,6 +47,21 @@ class ItalianInvoiceDdt {
 
 	}
 
+	public function SalvaFattura($Path) {
+
+		$Fattura = new Fattura( $this->ParteDescrittiva, $this->ParteTabellare );
+
+		return $Fattura->Salva( $Path );
+	}
+
+	public function SalvaDdt($Path) {
+
+		$Ddt = new Ddt( $this->ParteDescrittiva, $this->ParteTabellare );
+
+		return $Ddt->Salva( $Path );
+
+	}
+
 
 }
 

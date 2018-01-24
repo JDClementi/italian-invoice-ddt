@@ -50,6 +50,19 @@ class Fattura extends LayoutFattura {
 
 	}
 
+
+	public function Salva($name){
+
+		$this->AliasNbPages();
+		$this->AddPage();
+		$this->StampaCampiDescrittivi();
+		$this->StampaRigheDettaglio();
+		$this->StampaRigheCastelletto();
+		$this->StampaRigheTotali();
+		return $this->Output('F',$name);
+
+	}
+
 	public function StampaRigheDettaglio() {
 
 		$this->SetXY( parent::$MargineSinistroTabellaDettagli, parent::$MargineSuperioreTabellaDettagli + 12 );
@@ -202,7 +215,6 @@ class Fattura extends LayoutFattura {
 
 	}
 
-
 	public function PrintDettagliTableRow( $data, $minHeight, $maxHeight ) {
 		//Calculate the height of the row
 		$nb = 0;
@@ -243,6 +255,7 @@ class Fattura extends LayoutFattura {
 		//Go to the next line
 		$this->Ln( $h + 1 );
 	}
+
 	public function PrintCastellettoTableRow( $data ) {
 
 		//Calculate the height of the row

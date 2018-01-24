@@ -49,13 +49,21 @@ class Ddt extends LayoutDdt {
 
 	}
 
+	public function Salva($Path) {
+
+		$this->AliasNbPages();
+
+		$this->AddPage();
+
+		$this->StampaRigheDettaglio();
+
+		return $this->Output('F',$Path);
+	}
 
 
+	public function StampaRigheDettaglio() {
 
-
-	public function StampaRigheDettaglio(){
-
-		$this->SetY($this->QuotaSuperioreStampaTabellaDettagli);
+		$this->SetY( $this->QuotaSuperioreStampaTabellaDettagli );
 
 		foreach ( $this->Linee as $Linea ) {
 
@@ -79,12 +87,12 @@ class Ddt extends LayoutDdt {
 				),
 				array(
 					'width' => parent::$LarghezzaQuantita,
-					'txt'   => parent::FormattaNumero($Linea->Numero),
+					'txt'   => parent::FormattaNumero( $Linea->Numero ),
 					'align' => 'R'
 				),
 				array(
 					'width' => parent::$LarghezzaPrezzoUnitario,
-					'txt'   =>  parent::FormattaNumero( $Linea->PrezzoUnitario ),
+					'txt'   => parent::FormattaNumero( $Linea->PrezzoUnitario ),
 					'align' => 'R'
 				),
 				array(
@@ -153,7 +161,6 @@ class Ddt extends LayoutDdt {
 		//Go to the next line
 		$this->Ln( $h + 1 );
 	}
-
 
 
 }
