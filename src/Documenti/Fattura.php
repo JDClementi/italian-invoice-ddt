@@ -33,6 +33,31 @@ class Fattura extends LayoutFattura {
 		$this->ParteDescrittiva = $ParteDescrittiva;
 	}
 
+
+	function footer(){
+
+
+
+
+
+
+
+
+		if($this->ParteDescrittiva->NullaOsta !== ''){
+
+			$this->SetFont( 'Arial', '', 7);
+			$this->SetXY(10,280);
+			$this->Cell(190,5,$this->ParteDescrittiva->NullaOsta,1,0,'C',false);
+
+
+		}
+
+
+
+
+
+	}
+
 	public function Stampa() {
 
 
@@ -290,5 +315,8 @@ class Fattura extends LayoutFattura {
 		$this->Ln( $h );
 
 	}
+
+
+
 
 }

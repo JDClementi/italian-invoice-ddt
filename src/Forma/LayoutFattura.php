@@ -141,17 +141,13 @@ class LayoutFattura extends Pdf {
 
 		$this->PrintDatiPersone( $this->Compratore, 120, 36.5, 'C' );
 
-	}
-
-	function Footer() {
-
 		self::PrintTabellaDettagli();
 
 		self::PrintCastelletto();
 
 		self::PrintTotali();
-
 	}
+
 
 	public function PrintTabellaDettagli() {
 
@@ -337,5 +333,7 @@ class LayoutFattura extends Pdf {
 		$this->SetXY( self::$MargineSinistroTotali, $MargineSuperiore + 25 );
 		$this->Cell( 28, 7, 'TOTALE A PAGARE', 0, 1, 'L', false );
 	}
+
+
 
 }

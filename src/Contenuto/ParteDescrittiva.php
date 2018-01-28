@@ -14,7 +14,7 @@ use ItalianInvoiceDdt\Contenuto\Descrittivo\Persona;
 class ParteDescrittiva {
 
 
-	public $data, $numero, $Compratore, $Venditore,$Note="",$AspettoEsterioreBeni="",$Imballo="",$TipoSpedizione="",$CausaleDelTrasporto="",$Porto="",$CondizioniDiPagamento="",$DestinatarioMerce ="";
+	public $data, $numero, $Compratore, $Venditore,$Note="",$AspettoEsterioreBeni="",$Imballo="",$TipoSpedizione="",$CausaleDelTrasporto="",$Porto="",$CondizioniDiPagamento="",$DestinatarioMerce ="",$NullaOsta = '';
 
 	/**
 	 * @param string $DestinatarioMerce
@@ -70,6 +70,13 @@ class ParteDescrittiva {
 	 */
 	public function setCondizioniDiPagamento( $CondizioniDiPagamento ) {
 		$this->CondizioniDiPagamento = $CondizioniDiPagamento;
+	}
+
+	/**
+	 * @param string $NullaOsta
+	 */
+	public function setNullaOsta( $NullaOsta ) {
+		$this->NullaOsta = $NullaOsta;
 	}
 
 
