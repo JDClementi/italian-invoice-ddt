@@ -184,9 +184,9 @@ class LayoutDdt extends Pdf {
 
 	function Header() {
 
-		$this->PrintDatiPersone( $this->Venditore, 10, 25, 'V' );
+		$this->PrintDatiPersone( $this->Venditore, 10, 15, 'V' );
 
-		$this->PrintDatiPersone( $this->Compratore, 120, 35, 'C' );
+		$this->PrintDatiPersone( $this->Compratore, 120, 25, 'C' );
 
 
 		self::PrintTabellaPreDettagli();
