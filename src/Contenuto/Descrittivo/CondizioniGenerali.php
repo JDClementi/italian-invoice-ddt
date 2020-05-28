@@ -14,8 +14,6 @@ class CondizioniGenerali {
 
 	public $pagamento,$consegna,$imballaggio;
 
-
-
 	/**
 	 * @param mixed $pagamento
 	 */
@@ -36,6 +34,4 @@ class CondizioniGenerali {
 	public function setImballaggio( $imballaggio ) {
 		$this->imballaggio = $imballaggio;
 	}
-
-
 }
